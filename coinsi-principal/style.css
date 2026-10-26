@@ -45,3 +45,56 @@ body{
     box-sizing: border-box;
 }
 
+/* ══════════════════════════════════════════
+   HEADER
+   El header ocupa el 100% de ancho (color de
+   fondo). El contenido interno lo centra
+   .header-inner que tambien es .wrap.
+   ══════════════════════════════════════════ */
+header{
+    background-color: var(--header-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logoCongreso{
+    width: 250px;
+    transition: transform 0.2s;
+}
+.logoCongreso:hover{
+    transform: scale(1.04);
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+
+nav a{
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+nav a:hover{
+    background-color: var(--azul);
+    border-radius: 15px;
+    transform: scale(1.05);
+}
+
