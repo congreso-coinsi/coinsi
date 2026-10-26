@@ -1,0 +1,47 @@
+
+:root{
+    --azul:          #0057B8;  /* azul de la facultad — acento coinsi-principal  */
+    --azul-hover:    #0046a0;  /* azul mas oscuro para hovers             */
+    --header-bg:     #0d1b2a;  /* azul noche — header y footer            */
+    --fondo:         #ffffff;  /* fondo de la pagina                      */
+    --fondo-tarjeta: #f4f7fc;  /* blanco con tinte azul para tarjetas     */
+    --texto:         #111827;  /* texto coinsi-principal (casi negro)             */
+    --texto-suave:   #5a6478;  /* texto secundario / descripciones        */
+    --texto-muted:   #8a93a6;  /* etiquetas, labels, copyright            */
+    --borde:         #dde3ef;  /* bordes sutiles                          */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+section[id]{
+    scroll-margin-top: 85px; /* Evita que el header fijo tape el titulo */
+}
+h1, h2, h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--texto);
+}
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+/* ══════════════════════════════════════════
+   WRAP — patron de simbig.org
+   Una sola clase controla el ancho maximo y
+   el centrado. Todo lo que use .wrap queda
+   automaticamente alineado en la misma recta.
+   - max-width: ancho maximo del contenido
+   - margin: 0 auto: centra el bloque
+   - padding: 0 20px: margen de seguridad movil
+   ══════════════════════════════════════════ */
+.wrap{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
