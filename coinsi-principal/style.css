@@ -240,3 +240,65 @@ nav a:hover{
     background-color: var(--fondo-tarjeta);
 }
 
+/* ══════════════════════════════════════════
+   FUNDADORES
+   ══════════════════════════════════════════ */
+.fundadores{
+    padding: 40px 0;
+}
+
+.fundadores-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.tarjeta{
+    background: var(--fondo-tarjeta);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--borde);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 87, 184, 0.12);
+}
+
+/* La foto ocupa el ancho completo de la tarjeta.
+   object-position: top muestra la cara, no el torso.
+   background-color: placeholder mientras no hay foto. */
+.tarjeta-foto{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    background-color: var(--borde);
+}
+
+.tarjeta-info{
+    padding: 20px;
+}
+
+.tarjeta-info h3{
+    margin: 0 0 4px 0;
+    font-size: 17px;
+}
+
+.tarjeta-info .tarjeta-cargo{
+    margin: 0 0 12px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--azul);
+}
+
+.tarjeta-info p{
+    margin: 0;
+    font-size: 14px;
+    color: var(--texto-suave);
+    line-height: 1.6;
+}
+
