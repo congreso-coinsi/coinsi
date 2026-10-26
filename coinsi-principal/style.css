@@ -98,3 +98,96 @@ nav a:hover{
     transform: scale(1.05);
 }
 
+/* ══════════════════════════════════════════
+   PORTADA
+   ══════════════════════════════════════════ */
+.imagenPortada{
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+.portada{
+    position: relative;
+}
+
+/* Overlay oscuro sobre la foto — mejora legibilidad del texto */
+.portada-overlay{
+    position: absolute;
+    inset: 0;                                         /* cubre toda la portada */
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.25) 60%,
+        transparent 100%
+    );
+}
+
+/* left: max(20px, calc(50% - 560px)) sigue
+   matematicamente el borde izquierdo del .wrap
+   en cualquier tamaño de pantalla.            */
+.textoPortada{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);                      /* centrado vertical exacto */
+    left: max(20px, calc(50% - 560px));
+    color: white;
+    max-width: 600px;
+    z-index: 1;                                       /* encima del overlay */
+}
+
+.portada-titulo{
+    margin: 0 0 12px 0;
+    font-size: 44px;
+    color: white;
+    line-height: 1.15;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.portada-subtitulo{
+    margin: 0 0 24px 0;
+    font-size: 17px;
+    color: rgba(255,255,255,0.88);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+/* Cajitas en fila debajo del subtitulo */
+.portada-pills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.pill{
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+    letter-spacing: 0.2px;
+}
+
+/* Boton CTA */
+.portada-btn{
+    display: inline-block;
+    background-color: var(--azul);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.portada-btn:hover{
+    background-color: var(--azul-hover);
+    transform: translateY(-2px);
+}
+
