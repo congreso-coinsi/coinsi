@@ -361,3 +361,75 @@ nav a:hover{
     color: var(--texto);
 }
 
+/* ══════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════ */
+footer{
+    background-color: var(--header-bg);
+    color: white;
+    padding-top: 48px;
+}
+
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-marca{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-nombre{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--azul);
+}
+
+.footer-desc{
+    margin: 0;
+    color: var(--texto-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-titulo-links{
+    margin: 0 0 4px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--texto-muted);
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover{
+    color: var(--azul);
+}
+
+.footer-copy p{
+    margin: 0;
+    padding: 18px 0;
+    font-size: 13px;
+    color: var(--texto-muted);
+}
