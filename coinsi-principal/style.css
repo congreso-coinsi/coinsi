@@ -191,3 +191,52 @@ nav a:hover{
     transform: translateY(-2px);
 }
 
+/* ══════════════════════════════════════════
+   SECCIONES — fondos alternados
+   odd  (1,3) = blanco con puntitos
+   even (2,4) = azul muy claro, sin puntitos
+   ══════════════════════════════════════════ */
+.sec{
+    padding: 64px 0;
+}
+
+/* Titulos de cada seccion con linea azul decorativa */
+.subtitulo{
+    font-size: 30px;
+    margin: 0 0 28px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.subtitulo::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 48px;
+    height: 4px;
+    background-color: var(--azul);
+    border-radius: 2px;
+}
+
+/* Parrafos de lectura general estilizados para maxima legibilidad */
+.sec > .wrap > p{
+    color: var(--texto-suave);
+    line-height: 1.75;
+    font-size: 16px;
+    max-width: 760px;
+    margin: 0 0 24px 0;
+}
+
+/* Secciones impares: fondo blanco + patron de puntos con CSS puro */
+.sec:nth-of-type(odd){
+    background-color: var(--fondo);
+    background-image: radial-gradient(circle, var(--borde) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+}
+
+/* Secciones pares: fondo azul claro, limpio */
+.sec:nth-of-type(even){
+    background-color: var(--fondo-tarjeta);
+}
+
