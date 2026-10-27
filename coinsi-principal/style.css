@@ -98,75 +98,56 @@ nav a:hover{
     transform: scale(1.05);
 }
 
-/* ══════════════════════════════════════════
-   DROPDOWN (MENU DESPLEGABLE)
-   ══════════════════════════════════════════ */
-.dropdown {
+/* ── Dropdown nativo (details/summary) ── */
+.nav-dropdown{
     position: relative;
-    display: inline-flex;
-    align-items: center;
 }
 
-.dropdown-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.dropdown-toggle .arrow {
-    font-size: 11px;
-    transition: transform 0.25s ease;
+.nav-dropdown summary{
     display: inline-block;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    list-style: none;            /* quita el triangulito por defecto */
+    transition: background-color 0.2s, transform 0.2s;
 }
 
-.dropdown:hover .dropdown-toggle .arrow {
-    transform: rotate(180deg);
+.nav-dropdown summary::-webkit-details-marker{ display: none; }
+
+.nav-dropdown summary:hover{
+    background-color: var(--azul);
+    border-radius: 15px;
+    transform: scale(1.05);
 }
 
-.dropdown-menu {
+.nav-dropdown-menu{
     position: absolute;
-    top: calc(100% + 5px);
+    top: calc(100% + 6px);
     left: 0;
-    min-width: 170px;
-    background-color: #0d1b2a;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    min-width: 160px;
+    background: var(--header-bg);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
     padding: 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(8px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     z-index: 1100;
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown-menu a {
-    color: #f1f5f9;
+.nav-dropdown-menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
     padding: 9px 14px;
     font-size: 14px;
     font-weight: 500;
-    border-radius: 8px;
-    display: block;
-    white-space: nowrap;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    border-radius: 7px;
+    transition: background-color 0.2s;
 }
 
-.dropdown-menu a:hover {
+.nav-dropdown-menu a:hover{
     background-color: var(--azul);
-    color: #ffffff;
-    transform: translateX(4px);
-    border-radius: 8px;
 }
 
 /* ══════════════════════════════════════════
