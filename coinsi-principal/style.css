@@ -2,7 +2,7 @@
 :root{
     --azul:          #0057B8;  /* azul de la facultad — acento coinsi-principal  */
     --azul-hover:    #0046a0;  /* azul mas oscuro para hovers             */
-    --header-bg:     #0d1b2a;  /* azul noche — header y footer            */
+    --header-bg:     #000000;  /* azul noche — header y footer            */
     --fondo:         #ffffff;  /* fondo de la pagina                      */
     --fondo-tarjeta: #f4f7fc;  /* blanco con tinte azul para tarjetas     */
     --texto:         #111827;  /* texto coinsi-principal (casi negro)             */
