@@ -1,0 +1,57 @@
+
+/* Estilos para el cuerpo de la página */
+
+* {
+    border: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de la sección Hero (Encabezado) */
+.hero {
+    background-color: #0d233a; /* Azul institucional */
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero .subtitulo {
+    font-size: 1.2rem;
+    color: #00d47e; /* Verde de contraste */
+    margin-bottom: 25px;
+}
+
+/* Estilo del botón de llamada a la acción */
+.btn-principal {
+    display: inline-block;
+    background-color: #00d47e;
+    color: #0d233a;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.navbar {
+    background-color: #081622; /* Tono oscuro elegante para el menú */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Manda el logo a la izquierda y los links a la derecha */
+    align-items: center; /* Los centra verticalmente */
+    padding: 15px 40px;
+}
+
+.navbar .logo span {
+    color: #00d47e; /* Destaca el año en verde */
+}
