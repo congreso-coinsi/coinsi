@@ -333,7 +333,7 @@ body {
 
 .speaker-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.09);
     border-color: #cbd5e1;
 }
 
@@ -346,8 +346,8 @@ body {
 
 /* Foto circular del Ponente */
 .speaker-avatar {
-    width: 85px;
-    height: 85px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #e2e8f0;
@@ -356,30 +356,68 @@ body {
 }
 
 .speaker-header h3 {
-    font-size: 1.35rem;
+    font-family: 'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
     color: #0f172a;
-    line-height: 1.3;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+    margin: 0 0 4px 0;
+    transition: color 0.3s ease;
 }
 
 .affiliation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 0.95rem;
-    color: #64748b;
-    display: block;
-    margin-top: 3px;
-    font-weight: 600;
+    color: var(--accent-cyan);
+    margin-top: 10px;
+    
+}
+
+.speaker-flag {
+    width: 35px;
+    height: 23px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
 }
 
 .speech-title {
     font-weight: 700;
-    color: #0f172a;
+    color: #0a0535;
     font-size: 1.15rem;
     margin: 15px 0 10px;
+    text-align: center;
 }
 
 .bio {
     font-size: 1rem;
     color: var(--text-gray);
     line-height: 1.65;
+    text-align: justify;
+}
+
+.speaker-social {
+    color: #0a66c2; /* Color corporativo de LinkedIn */
+    font-size: 1.1rem;
+    margin-left: 6px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.speaker-social.academic-icon {
+    color: var(--accent-cyan, #00b4d8); /* Color cian para perfiles académicos como CTI Vitae */
+}
+
+.speaker-social:hover {
+    color: #00e5ff;
+    transform: scale(1.25);
 }
 
 /* Tablas y Pestañas */
@@ -493,17 +531,162 @@ body {
 }
 
 /* Footer Tradicional */
-footer {
-    background: #000000;
-    text-align: center;
-    padding: 36px 20px;
-    border-top: 1px solid #000000;
-    color: #94a3b8;
-    font-size: 0.9rem;
+.site-footer {
+    background-color: #12161f;
+    color: #ffffff;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-footer p {
-    color: #cbd5e1;
+.footer-title {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #ffffff;
+    text-align: left;
+    font-weight: 700;
+}
+
+.footer-contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact-avatar {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-cyan, #00b4d8);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+}
+
+.contact-info {
+    border-left: 3px solid #00b4d8;
+    padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.contact-info h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.contact-role {
+    font-size: 0.88rem;
+    color: #e2e8f0;
+    margin: 0;
+}
+
+.contact-org, .contact-location {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.contact-socials a {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.contact-socials a:hover {
+    color: var(--accent-cyan, #00b4d8);
+}
+
+/* Barra Inferior del Footer */
+.footer-bottom {
+    background-color: #080a0f;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+}
+
+.footer-bottom-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.copyright {
+    color: #94a3b8;
+    margin: 0;
+}
+
+.copyright strong {
+    color: #ffffff;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-links .sep {
+    color: #475569;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.footer-social-icons a {
+    color: #94a3b8;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social-icons a:hover {
+    color: var(--accent-cyan, #00b4d8);
+    transform: translateY(-2px);
+}
+
+/* Adaptabilidad a Celulares */
+@media (max-width: 768px) {
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    .footer-title {
+        text-align: center;
+    }
+    .contact-card {
+        justify-content: flex-start;
+    }
 }
 
 /* Responsive */
