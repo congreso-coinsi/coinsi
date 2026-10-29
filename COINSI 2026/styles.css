@@ -79,7 +79,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.seccion-fechas {
+.seccion-programa {
     background-color: #f4f6f9;
     padding: 40px 20px;
     text-align: center;
@@ -127,3 +127,46 @@ body {
     color: #4a5568;
     font-size: 0.95rem;
 }
+
+.seccion-investigacion {
+    padding: 70px 3%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.grid-investigacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card-investigacion {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card-investigacion:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
+}
+
+.btn-investigacion {
+    display: inline-block;
+    margin-top: 15px;
+    color: #00d47e;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-investigacion:hover {
+    color: #00b368;
+    text-decoration: underline;
+}
+
