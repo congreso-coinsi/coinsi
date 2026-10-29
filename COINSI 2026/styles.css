@@ -78,3 +78,52 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+
+.seccion-fechas {
+    background-color: #f4f6f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.lista-fechas {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista-fechas li {
+    background-color: transparent;
+    max-width: 600px;
+    margin: 12px auto;
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+    color: #2d3748;
+    border-left: 5px solid #00d47e;
+}
+
+.contenedor-metricas {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+.caja-metrica {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 20px 30px;
+    border-radius: 8px;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.caja-metrica h3 {
+    font-size: 2.2rem;
+    color: #0d233a;
+    margin-bottom: 5px;
+}
+
+.caja-metrica p {
+    color: #4a5568;
+    font-size: 0.95rem;
+}
