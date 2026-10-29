@@ -877,10 +877,7 @@ body.modal-abierto{
 }
 
 /* ══════════════════════════════════════════
-   NAVEGACIÓN MÓVIL
-   El menú se oculta y se abre con el botón
-   hamburguesa. Se cierra al elegir una opción,
-   al tocar fuera o con la tecla Escape.
+   NAVEGACIÓN MÓVIL Y RESPONSIVE
    ══════════════════════════════════════════ */
 @media (max-width: 980px){
     .header-inner{
@@ -952,5 +949,94 @@ body.modal-abierto{
     .nav-dropdown-menu a{
         padding: 11px 14px;
         font-size: 15px;
+    }
+}
+
+/* ══════════════════════════════════════════
+   PORTADA Y AJUSTES MÓVILES (< 768px)
+   ══════════════════════════════════════════ */
+@media (max-width: 768px){
+    .portada{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 560px;
+    }
+
+    .imagenPortada{
+        position: absolute;
+        inset: 0;
+        height: 100%;
+    }
+
+    .portada-overlay{
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.45) 0%,
+            rgba(0, 0, 0, 0.75) 60%,
+            rgba(0, 0, 0, 0.92) 100%
+        );
+    }
+
+    .textoPortada{
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 70px 20px 45px;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    .portada-titulo{
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .portada-subtitulo{
+        font-size: 15px;
+        margin-bottom: 18px;
+        line-height: 1.5;
+    }
+
+    .portada-pills{
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    .pill{
+        font-size: 12px;
+        padding: 5px 11px;
+    }
+
+    .portada-btn{
+        display: flex;
+        width: 100%;
+        max-width: 360px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding: 14px 18px;
+    }
+
+    .portada-btn-titulo{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px){
+    .portada{
+        min-height: 590px;
+    }
+
+    .textoPortada{
+        padding: 60px 16px 40px;
+    }
+
+    .portada-titulo{
+        font-size: 25px;
+    }
+
+    .portada-btn{
+        max-width: 100%;
     }
 }
