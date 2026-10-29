@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Congreso de Ingenieria de Sistemas Puno</title>
-    <link rel="stylesheet" href="coinsi-principal/style.css?v=2">
+    <link rel="stylesheet" href="coinsi-principal/style.css?v=5">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 </head>
@@ -13,7 +13,12 @@
 <header>
     <div class="wrap header-inner">
         <img src="coinsi-principal/images/Logocoinsi.svg" class="logoCongreso">
-        <nav>
+        <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="menu-principal">
             <a href="#inicio">Inicio</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#fundadores">Fundadores</a>
@@ -37,7 +42,7 @@
         <div class="portada-overlay"></div>
 
         <div class="textoPortada">
-            <h1 class="portada-titulo">Congreso en Ingeniería de Sistemas</h1>
+            <h1 class="portada-titulo">Congreso Internacional de Ingeniería de Sistemas</h1>
             <p class="portada-subtitulo">
                 El COINSI (Congreso Internacional de Ingeniería de Sistemas) es un evento académico organizado por la
                 Escuela Profesional de Ingeniería de Sistemas de la Universidad Nacional del Altiplano de Puno (UNA Puno).
@@ -45,12 +50,20 @@
 
             <div class="portada-pills">
                 <span class="pill">Puno, Perú</span>
-                <span class="pill">Unap</span>
+                <span class="pill">UNAP</span>
                 <span class="pill">Innovacion</span>
-                <span class="pill">Investigacion</span>
+                <span class="pill">Investigación</span>
+                <span class="pill">Creatividad</span>
+
             </div>
 
-            <a href="#nosotros" class="portada-btn">Coinsi2026 →</a>
+            <a href="COINSI%202026/index.html" class="portada-btn portada-btn-2026">
+                <span class="portada-btn-texto">
+                    <span class="portada-btn-etiqueta">Congreso actual</span>
+                    <span class="portada-btn-titulo">COINSI 2026</span>
+                </span>
+                <span class="portada-btn-flecha" aria-hidden="true">→</span>
+            </a>
         </div>
     </div>
 
@@ -162,13 +175,129 @@
 
     </div>
 
-    <div class="footer-copy">
-        <div class="wrap">
-            <p>© 2026 COINSI · Todos los derechos reservados</p>
+    <div class="footer-legal">
+        <div class="wrap footer-legal-inner">
+            <p class="footer-copy">© 2026 COINSI · Todos los derechos reservados</p>
+            <div class="footer-legal-links">
+                <button type="button" class="legal-link" data-dialog="modal-privacidad" aria-haspopup="dialog">Política de Privacidad</button>
+                <span class="legal-sep" aria-hidden="true">|</span>
+                <button type="button" class="legal-link" data-dialog="modal-terminos" aria-haspopup="dialog">Términos de uso</button>
+                <span class="legal-sep" aria-hidden="true">|</span>
+                <button type="button" class="legal-link" data-dialog="modal-faq" aria-haspopup="dialog">Preguntas frecuentes</button>
+            </div>
         </div>
     </div>
 </footer>
 
-<script src="coinsi-principal/script.js"></script>
+<!-- ══════════════════════════════════════════
+     VENTANAS LEGALES (sin salir de la página)
+     ══════════════════════════════════════════ -->
+<dialog class="legal-modal" id="modal-privacidad" aria-labelledby="titulo-privacidad">
+    <div class="legal-modal-cabecera">
+        <h2 id="titulo-privacidad">Política de Privacidad</h2>
+        <button type="button" class="legal-modal-cerrar" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="legal-modal-cuerpo">
+        <p>En COINSI respetamos tu privacidad. Esta política explica qué información podemos recopilar cuando visitas este sitio y cómo la utilizamos.</p>
+
+        <h3>Información que recopilamos</h3>
+        <p>Este sitio no cuenta con formularios de registro. Solo recibimos los datos que tú nos envías voluntariamente por correo electrónico (por ejemplo, tu nombre, correo y mensaje) cuando escribes a nuestras direcciones de contacto.</p>
+
+        <h3>Uso de la información</h3>
+        <p>Los datos que nos compartes se utilizan únicamente para responder tus consultas, coordinar inscripciones o ponencias y enviarte información relacionada con el congreso. No vendemos ni compartimos tu información con terceros para fines publicitarios.</p>
+
+        <h3>Cookies</h3>
+        <p>Este sitio no utiliza cookies de seguimiento ni de publicidad. El navegador puede almacenar información técnica necesaria para el funcionamiento de la página.</p>
+
+        <h3>Enlaces externos</h3>
+        <p>La página puede incluir enlaces a sitios de terceros, como ediciones anteriores o redes sociales. No somos responsables de las políticas de privacidad de esos sitios.</p>
+
+        <h3>Tus derechos</h3>
+        <p>Puedes solicitar el acceso, la corrección o la eliminación de los datos que nos hayas enviado escribiendo a <a href="mailto:correo1@coinsi.edu.pe">correo1@coinsi.edu.pe</a>.</p>
+
+        <h3>Cambios en esta política</h3>
+        <p>Podemos actualizar esta política cuando sea necesario. La versión vigente será siempre la publicada en esta página.</p>
+
+        <p class="legal-nota">Última actualización: 2026</p>
+    </div>
+</dialog>
+
+<dialog class="legal-modal" id="modal-terminos" aria-labelledby="titulo-terminos">
+    <div class="legal-modal-cabecera">
+        <h2 id="titulo-terminos">Términos de uso</h2>
+        <button type="button" class="legal-modal-cerrar" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="legal-modal-cuerpo">
+        <p>Al navegar por este sitio aceptas los siguientes términos. Si no estás de acuerdo, te pedimos no utilizar la página.</p>
+
+        <h3>Finalidad del sitio</h3>
+        <p>Este sitio tiene fines informativos y académicos: difundir el COINSI, sus actividades, ediciones anteriores y canales de contacto.</p>
+
+        <h3>Propiedad intelectual</h3>
+        <p>Los textos, logotipos, imágenes y demás contenidos pertenecen a COINSI, a la Universidad Nacional del Altiplano de Puno o se utilizan con autorización. No está permitida su reproducción o uso comercial sin autorización previa.</p>
+
+        <h3>Uso adecuado</h3>
+        <p>Te comprometes a utilizar el sitio de forma lícita y respetuosa. No está permitido intentar vulnerar su seguridad, alterar su contenido ni usarlo para fines que perjudiquen a terceros.</p>
+
+        <h3>Exactitud de la información</h3>
+        <p>Procuramos mantener la información actualizada. Sin embargo, las fechas, el programa y otras actividades pueden cambiar; la información oficial se comunicará por esta página y por nuestros canales de contacto.</p>
+
+        <h3>Enlaces externos</h3>
+        <p>Los enlaces a otros sitios se ofrecen como referencia. No controlamos ni somos responsables de su contenido o disponibilidad.</p>
+
+        <h3>Modificaciones</h3>
+        <p>Podemos actualizar estos términos en cualquier momento. El uso continuado del sitio implica la aceptación de la versión vigente.</p>
+
+        <h3>Contacto</h3>
+        <p>Para cualquier consulta sobre estos términos, escríbenos a <a href="mailto:correo1@coinsi.edu.pe">correo1@coinsi.edu.pe</a>.</p>
+
+        <p class="legal-nota">Última actualización: 2026</p>
+    </div>
+</dialog>
+
+<dialog class="legal-modal" id="modal-faq" aria-labelledby="titulo-faq">
+    <div class="legal-modal-cabecera">
+        <h2 id="titulo-faq">Preguntas frecuentes</h2>
+        <button type="button" class="legal-modal-cerrar" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="legal-modal-cuerpo">
+        <details class="faq-item">
+            <summary>¿Qué es COINSI?</summary>
+            <p>COINSI es el Congreso Internacional de Ingeniería de Sistemas, organizado por la Escuela Profesional de Ingeniería de Sistemas de la Universidad Nacional del Altiplano de Puno. Es un espacio para compartir investigación, innovación y experiencias en el área.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Dónde se realiza el congreso?</summary>
+            <p>En Puno, Perú, en la Universidad Nacional del Altiplano. Las fechas y el lugar exacto se publican en la portada de este sitio y en nuestros canales oficiales.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Cómo puedo participar?</summary>
+            <p>Puedes participar como asistente, ponente o institución colaboradora. Escríbenos a <a href="mailto:correo1@coinsi.edu.pe">correo1@coinsi.edu.pe</a> y te orientaremos según tu caso.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Cómo me inscribo?</summary>
+            <p>La inscripción se habilita según el cronograma del congreso. Para conocer el proceso y las tarifas vigentes, consulta con el equipo de coordinación en <a href="mailto:correo2@coinsi.edu.pe">correo2@coinsi.edu.pe</a>.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Puedo presentar un trabajo?</summary>
+            <p>Sí. Las convocatorias para ponencias se anuncian en esta página y en nuestras redes. Escríbenos para conocer los requisitos, plazos y áreas temáticas.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Dónde puedo ver ediciones anteriores?</summary>
+            <p>Puedes visitar la edición <a href="COINSI%202025/index.html" target="_blank" rel="noopener noreferrer">COINSI 2025</a> desde el menú de navegación.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>¿Cómo puedo contactarlos?</summary>
+            <p>Escríbenos a <a href="mailto:correo1@coinsi.edu.pe">correo1@coinsi.edu.pe</a> (coordinación general) o a <a href="mailto:correo2@coinsi.edu.pe">correo2@coinsi.edu.pe</a> (ponencias e inscripciones).</p>
+        </details>
+    </div>
+</dialog>
+
+<script src="coinsi-principal/script.js?v=2"></script>
 </body>
 </html>
