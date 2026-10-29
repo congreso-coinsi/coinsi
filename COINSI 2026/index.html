@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COINSI 2026</title>
-    <!-- Vinculamos el archivo CSS externo -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,16 +12,114 @@
         <nav class="nav-links">
             <a href="#inicio" class="activo">Inicio</a>
             <a href="#ponentes">Ponentes</a>
-            <a href="#fechas">Fechas</a>
-            <a href="#registro">Registro</a>
             <a href="#programa">Programa</a>
+            <a href="#investigacion">Investigación</a>
+            <a href="#registro">Registro</a>
         </nav>
     </header>
-    <section class="hero">
+    <section class="titulo">
         <h1>COINSI 2026</h1>
         <p class="subtitulo">X Congreso Internacional de Ingeniería de Sistemas UNA - Puno</p>
         <a href="#registro" class="btn-principal">Inscribirse Ahora</a>
     </section>
+
+    <section id="ponentes" class="seccion-ponentes">
+        <h2>Ponentes Principales</h2>
+        <div class="grid-ponentes">
+            <div class="tarjeta-ponente">
+                <h3>Dr. Alan Turing</h3>
+                <p>Inteligencia Artificial</p>
+            </div>
+            <div class="tarjeta-ponente">
+                <h3>Dra. Margaret Hamilton</h3>
+                <p>Ingeniería de Software</p>
+            </div>
+            <div class="tarjeta-ponente">
+                <h3>Ing. Linus Torvalds</h3>
+                <p>Sistemas Operativos</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="investigacion" class="seccion-investigacion">
+        <div class="container">
+            <h2 class="section-title">Concurso de Investigación</h2>
+            <p class="section-desc">Modalidad Póster y Artículos Científicos</p>
+        </div>
+
+        <div class="grid-investigacion">
+            <div class="card-investigacion">
+                <h3>Categoría A</h3>
+                <p>Proyectos de Investigación Terminados</p>
+                <a href="#categoría-a" class="btn-investigacion">Ver Bases</a>
+            </div>
+
+            <div class="card-investigacion">
+                <h3>Categoría B</h3>
+                <p>Proyectos de Investigación en Desarrollo</p>
+                <a href="#categoría-b" class="btn-investigacion">Ver Bases</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="programa" class="seccion-programa">
+        <div class="container">
+            <h2 class="section-title">Programa del Evento</h2>
+            <p class="section-desc">Actividades Académicas y Conferencias</p>
+        </div>
+        <div class="programa-tabs">
+            <button class="tab-btn">Día 1 (Miércoles)</button>
+            <button class="tab-btn">Día 2 (Jueves)</button>
+            <button class="tab-btn">Día 3 (Viernes)</button>
+        </div>
+        <div class="programa-content">
+            <div class="evento-item">
+                <span class="evento-hora">08:30 AM - 09:30 AM</span>
+                <h3>Inauguración Oficial del COINSI 2026</h3>
+                <p>Palabras de bienvenida a cargo de las autoridades de la EPIS y comité organizador.</p>
+            </div>
+            <div class="evento-item">
+                <span class="evento-hora">09:45 AM - 11:00 AM</span>
+                <h3>Conferencia Magistral: Inteligencia Artificial en la Industria</h3>
+                <p>Exploración de casos de éxito en la implementación de modelos predictivos y PyTorch.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="fechas" class="seccion-fechas">
+        <h2>Fechas Importantes</h2>
+        <ul class="lista-fechas">
+            <li><strong>Envío de Artículos:</strong> 30 de Agosto, 2026</li>
+            <li><strong>Notificación de Aceptación:</strong> 10 de Septiembre, 2026</li>
+            <li><strong>Congreso COINSI:</strong> 28 al 30 de Octubre, 2026</li>
+        </ul>
+    </section>
+
+
+    <section id="registro" class="seccion-registro">
+        <h2>Inscripciones Abiertas hasta el día del evento</h2>
+        <p>Sé parte del X Congreso Internacional de Ingeniería de Sistemas.</p>
+        <a href="#registro" class="btn-principal">Regístrate Ahora</a>
+    </section>
+
+    <div class="contenedor-metricas">
+            <div class="caja-metrica">
+                <h3>+500</h3>
+                <p>Participantes</p>
+            </div>
+            <div class="caja-metrica">
+                <h3>+15</h3>
+                <p>Ponentes Internacionales</p>
+            </div>
+            <div class="caja-metrica">
+                <h3>+5</h3>
+                <p>Países Invitados</p>
+            </div>
+        </div>
+    <footer class="footer">
+        <p>&copy; 2026 COINSI - UNA Puno. Todos los derechos reservados.</p> </footer>
 
 </body>
 </html>
