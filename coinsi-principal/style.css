@@ -272,22 +272,129 @@ nav a:hover{
     letter-spacing: 0.2px;
 }
 
-/* Boton CTA */
+/* Boton CTA — acceso al congreso actual */
 .portada-btn{
-    display: inline-block;
-    background-color: var(--azul);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    overflow: hidden;
+    padding: 12px 16px 12px 22px;
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 14px;
+    background: linear-gradient(135deg, #0a6fe0 0%, var(--azul) 55%, #003a7d 100%);
     color: white;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 12px 28px;
-    border-radius: 8px;
-    transition: background-color 0.2s, transform 0.2s;
+    box-shadow:
+        0 10px 28px rgba(0,87,184,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+/* Destello que recorre el boton al pasar el mouse */
+.portada-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,0.35), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
 }
 
 .portada-btn:hover{
-    background-color: var(--azul-hover);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    filter: brightness(1.06);
+    box-shadow:
+        0 16px 34px rgba(0,87,184,0.55),
+        inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.portada-btn:hover::before{
+    left: 125%;
+}
+
+.portada-btn:focus-visible{
+    outline: 3px solid rgba(255,255,255,0.9);
+    outline-offset: 3px;
+}
+
+.portada-btn:active{
+    transform: translateY(-1px);
+}
+
+.portada-btn-texto{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.portada-btn-etiqueta{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.78);
+}
+
+/* Punto verde: indica que es la edicion vigente */
+.portada-btn-etiqueta::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74,222,128,0.18);
+    animation: pulsoPunto 2s ease-in-out infinite;
+}
+
+.portada-btn-titulo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    line-height: 1.1;
+}
+
+.portada-btn-flecha{
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+    font-size: 19px;
+    line-height: 1;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.portada-btn:hover .portada-btn-flecha{
+    transform: translateX(4px);
+    background: white;
+    color: var(--azul);
+}
+
+@keyframes pulsoPunto{
+    0%, 100%{ box-shadow: 0 0 0 3px rgba(74,222,128,0.18); }
+    50%{ box-shadow: 0 0 0 6px rgba(74,222,128,0.05); }
+}
+
+/* Respeta la preferencia de reducir movimiento */
+@media (prefers-reduced-motion: reduce){
+    .portada-btn,
+    .portada-btn::before,
+    .portada-btn-flecha,
+    .portada-btn-etiqueta::before{
+        transition: none;
+        animation: none;
+    }
 }
 
 /* ══════════════════════════════════════════
