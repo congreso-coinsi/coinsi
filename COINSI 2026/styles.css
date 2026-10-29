@@ -1,8 +1,9 @@
 
 /* Estilos para el cuerpo de la página */
-
 * {
-    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -14,28 +15,28 @@ body {
 }
 
 /* Estilos de la sección Hero (Encabezado) */
-.hero {
+.titulo {
     background-color: #0d233a; /* Azul institucional */
     color: #ffffff;
     text-align: center;
     padding: 60px 20px;
 }
 
-.hero h1 {
+.titulo h1 {
     font-size: 2.2rem;
     margin-bottom: 10px;
 }
 
-.hero .subtitulo {
+.titulo .subtitulo {
     font-size: 1.2rem;
-    color: #00d47e; /* Verde de contraste */
+    color: #00a2d4; /* Verde de contraste */
     margin-bottom: 25px;
 }
 
 /* Estilo del botón de llamada a la acción */
 .btn-principal {
     display: inline-block;
-    background-color: #00d47e;
+    background-color: #007fd4;
     color: #0d233a;
     padding: 12px 28px;
     text-decoration: none;
@@ -53,5 +54,27 @@ body {
 }
 
 .navbar .logo span {
-    color: #00d47e; /* Destaca el año en verde */
+    color: #1d92f1; /* Destaca el año en verde */
+}
+
+.footer { 
+    background-color: #081622; 
+    color: #8899a6; 
+    text-align: center; 
+    padding: 20px; 
+    font-size: 0.9rem; 
+}
+
+.grid-ponentes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.tarjeta-ponente {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
