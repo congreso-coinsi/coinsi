@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Congreso de Ingenieria de Sistemas Puno</title>
-    <link rel="stylesheet" href="coinsi-principal/style.css?v=3">
+    <link rel="stylesheet" href="coinsi-principal/style.css?v=4">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 </head>
@@ -13,7 +13,12 @@
 <header>
     <div class="wrap header-inner">
         <img src="coinsi-principal/images/Logocoinsi.svg" class="logoCongreso">
-        <nav>
+        <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="menu-principal">
             <a href="#inicio">Inicio</a>
             <a href="#nosotros">Nosotros</a>
             <a href="#fundadores">Fundadores</a>
@@ -285,6 +290,6 @@
     </div>
 </dialog>
 
-<script src="coinsi-principal/script.js"></script>
+<script src="coinsi-principal/script.js?v=2"></script>
 </body>
 </html>
