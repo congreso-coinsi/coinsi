@@ -1,11 +1,11 @@
 
 :root{
-    --azul:          #0057B8;  /* azul de la facultad — acento coinsi-principal  */
+    --azul:          #0057B8;  /* azul de la facultad — acento coinsi  */
     --azul-hover:    #0046a0;  /* azul mas oscuro para hovers             */
     --header-bg:     #000000;  /* azul noche — header y footer            */
     --fondo:         #ffffff;  /* fondo de la pagina                      */
     --fondo-tarjeta: #f4f7fc;  /* blanco con tinte azul para tarjetas     */
-    --texto:         #111827;  /* texto coinsi-principal (casi negro)             */
+    --texto:         #111827;  /* texto coinsi (casi negro)             */
     --texto-suave:   #5a6478;  /* texto secundario / descripciones        */
     --texto-muted:   #8a93a6;  /* etiquetas, labels, copyright            */
     --borde:         #dde3ef;  /* bordes sutiles                          */
