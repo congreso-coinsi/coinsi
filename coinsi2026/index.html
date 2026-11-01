@@ -2,124 +2,757 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COINSI 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COINSI 2026 · VI Congreso Internacional de Ingeniería de Sistemas</title>
+    <meta name="description" content="COINSI 2026, VI Congreso Internacional de Ingeniería de Sistemas. Conferencias, investigación y tecnología en la EPIS - Universidad Nacional del Altiplano de Puno. 22 de noviembre de 2026.">
+    <meta name="theme-color" content="#191714">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <header class="navbar">
-        <div class="logo">COINSI <span>2026</span></div>
-        <nav class="nav-links">
-            <a href="#inicio" class="activo">Inicio</a>
-            <a href="#ponentes">Ponentes</a>
-            <a href="#programa">Programa</a>
-            <a href="#investigacion">Investigación</a>
-            <a href="#registro">Registro</a>
-        </nav>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <!-- Marca tipográfica provisional. Reemplazar por el logo oficial de COINSI 2026 cuando esté disponible. -->
+            <a class="brand" href="#inicio" aria-label="COINSI 2026, ir al inicio">
+                <span class="brand-line">
+                    <span class="brand-word">COINSI</span>
+                    <span class="brand-year">2026</span>
+                </span>
+                <span class="brand-sub">EPIS · UNA Puno</span>
+            </a>
+
+            <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-controls="nav-principal" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+                <a href="#inicio" class="is-active">Inicio</a>
+                <a href="#ponentes">Ponentes</a>
+                <a href="#programa">Programa</a>
+                <a href="#investigacion">Investigación</a>
+                <a href="#registro">Registro</a>
+
+                <details class="nav-dropdown">
+                    <summary>Ediciones</summary>
+                    <div class="nav-dropdown-menu">
+                        <a href="../index.html">Inicio COINSI</a>
+                        <a href="../coinsi2025/index.html">COINSI 2025</a>
+                        <a href="#inicio" aria-current="page">COINSI 2026</a>
+                    </div>
+                </details>
+
+                <a href="#registro" class="nav-cta">Inscríbete</a>
+            </nav>
+        </div>
     </header>
-    <section class="titulo">
-        <h1>COINSI 2026</h1>
-        <p class="subtitulo">X Congreso Internacional de Ingeniería de Sistemas UNA - Puno</p>
-        <a href="#registro" class="btn-principal">Inscribirse Ahora</a>
-    </section>
 
-    <section id="ponentes" class="seccion-ponentes">
-        <h2>Ponentes Principales</h2>
-        <div class="grid-ponentes">
-            <div class="tarjeta-ponente">
-                <h3>Dr. Alan Turing</h3>
-                <p>Inteligencia Artificial</p>
+    <main id="contenido">
+        <!-- ============================================================
+             PORTADA
+             La imagen de fondo está difuminada y lleva un degradado
+             oscuro cálido para que el texto se lea sin esfuerzo.
+             ============================================================ -->
+        <section class="hero" id="inicio">
+            <!-- Imagen de portada provisional: Titicaca difuminado. Reemplazar por la imagen oficial si se define. -->
+            <div class="hero-media" aria-hidden="true">
+                <img src="imagenes/portada.jpg" alt="">
             </div>
-            <div class="tarjeta-ponente">
-                <h3>Dra. Margaret Hamilton</h3>
-                <p>Ingeniería de Software</p>
+
+            <div class="wrap hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span>VI Congreso Internacional</span> · Ingeniería de Sistemas</p>
+                    <h1>COINSI <em>2026</em></h1>
+                    <p class="hero-lead">
+                        Conferencias magistrales, investigación y tecnología para el sur del Perú.
+                        Nos reunimos en Puno desde el 22 de noviembre de 2026.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#registro" class="btn btn--primary">Inscríbete</a>
+                        <a href="#programa" class="btn btn--ghost">Ver programa</a>
+                    </div>
+
+                    <ul class="hero-meta">
+                        <li>EPIS · UNA Puno</li>
+                        <li>Puno, Perú</li>
+                        <li>Modalidad presencial</li>
+                    </ul>
+                </div>
+
+                <aside class="countdown" aria-labelledby="countdown-title">
+                    <div class="countdown-head">
+                        <h2 id="countdown-title">Cuenta regresiva</h2>
+                        <span>22 · NOV · 2026</span>
+                    </div>
+
+                    <div class="countdown-grid" aria-hidden="true">
+                        <div>
+                            <span class="countdown-number" id="cd-days">--</span>
+                            <span class="countdown-label">Días</span>
+                        </div>
+                        <div>
+                            <span class="countdown-number" id="cd-hours">--</span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+                        <div>
+                            <span class="countdown-number" id="cd-minutes">--</span>
+                            <span class="countdown-label">Min</span>
+                        </div>
+                        <div>
+                            <span class="countdown-number" id="cd-seconds">--</span>
+                            <span class="countdown-label">Seg</span>
+                        </div>
+                    </div>
+
+                    <p class="countdown-note">Inicio del congreso · 09:00 h (GMT-5)</p>
+                    <a class="countdown-link" href="#programa">Consultar el programa <span aria-hidden="true">→</span></a>
+                </aside>
+
+                <p class="sr-only">El COINSI 2026 inicia el domingo 22 de noviembre de 2026 a las 09:00, hora de Perú.</p>
             </div>
-            <div class="tarjeta-ponente">
-                <h3>Ing. Linus Torvalds</h3>
-                <p>Sistemas Operativos</p>
+        </section>
+
+        <!-- ============================================================
+             CIFRAS
+             Datos de referencia de ediciones anteriores. Actualizar
+             cuando el comité confirme las cifras de 2026.
+             ============================================================ -->
+        <section class="stats" aria-label="El COINSI en cifras">
+            <div class="wrap stats-grid">
+                <div>
+                    <strong>+500</strong>
+                    <span>participantes en ediciones anteriores</span>
+                </div>
+                <div>
+                    <strong>+30</strong>
+                    <span>proyectos presentados en ediciones anteriores</span>
+                </div>
+                <div>
+                    <strong>+10</strong>
+                    <span>ponentes internacionales en ediciones anteriores</span>
+                </div>
+                <div>
+                    <strong>06</strong>
+                    <span>ediciones construyendo comunidad</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             EL CONGRESO
+             ============================================================ -->
+        <section class="section" id="congreso">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label"><span>01</span> El congreso</p>
+                    <div>
+                        <h2>Un espacio para pensar la ingeniería que viene.</h2>
+                        <p>
+                            El COINSI es el encuentro académico de la Escuela Profesional de Ingeniería de Sistemas
+                            de la Universidad Nacional del Altiplano de Puno. Durante el congreso reunimos a estudiantes,
+                            docentes, investigadores y profesionales para compartir conocimiento y conversar sobre
+                            los retos tecnológicos de la región.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-copy">
+                        <p>
+                            Esta edición pone el foco en la investigación aplicada, la inteligencia artificial,
+                            la ciencia de datos, la ciberseguridad y el desarrollo de software. Queremos que las
+                            ideas que se discutan en Puno tengan una relación directa con los problemas reales
+                            del altiplano y del país.
+                        </p>
+                        <p>
+                            El congreso combina conferencias magistrales con espacios más cercanos: talleres,
+                            presentación de proyectos estudiantiles, concurso de investigación y un hackathon
+                            para trabajar en equipo. La participación está abierta a la comunidad universitaria
+                            y al público interesado.
+                        </p>
+                    </div>
+
+                    <aside class="fact-card">
+                        <h3>Datos del evento</h3>
+                        <dl>
+                            <div>
+                                <dt>Inicio</dt>
+                                <dd>22 de noviembre de 2026</dd>
+                            </div>
+                            <div>
+                                <dt>Sede</dt>
+                                <dd>EPIS · UNA Puno</dd>
+                            </div>
+                            <div>
+                                <dt>Ciudad</dt>
+                                <dd>Puno, Perú</dd>
+                            </div>
+                            <div>
+                                <dt>Modalidad</dt>
+                                <dd>Presencial</dd>
+                            </div>
+                        </dl>
+                    </aside>
+                </div>
+
+                <div class="pillars">
+                    <article>
+                        <span>01</span>
+                        <h3>Conferencias</h3>
+                        <p>Ponencias magistrales y paneles con especialistas de la academia y la industria.</p>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <h3>Investigación</h3>
+                        <p>Concurso de proyectos en modalidad póster, con categorías para trabajos terminados y en desarrollo.</p>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <h3>Hackathon</h3>
+                        <p>Un reto colaborativo para proponer soluciones tecnológicas a problemas concretos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PONENTES
+             Reemplazar las tarjetas de ejemplo por los ponentes
+             confirmados: foto, nombre, cargo, institución y tema.
+             ============================================================ -->
+        <section class="section section--bone" id="ponentes">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label"><span>02</span> Ponentes</p>
+                    <div>
+                        <h2>Voces de la academia y la industria.</h2>
+                        <p>
+                            Cada edición reúne a investigadores, docentes y profesionales que comparten su
+                            experiencia en inteligencia artificial, datos, seguridad, software y gestión
+                            tecnológica. La lista oficial se publicará en esta sección.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="speaker-grid">
+                    <article class="speaker-card">
+                        <div class="speaker-portrait" aria-hidden="true"><span>01</span></div>
+                        <div class="speaker-body">
+                            <span class="tag">Por confirmar</span>
+                            <h3>Conferencia magistral</h3>
+                            <p class="speaker-affiliation">Ponente internacional</p>
+                            <p>El nombre y la institución del ponente se anunciarán en las próximas semanas.</p>
+                        </div>
+                    </article>
+
+                    <article class="speaker-card">
+                        <div class="speaker-portrait" aria-hidden="true"><span>02</span></div>
+                        <div class="speaker-body">
+                            <span class="tag">Por confirmar</span>
+                            <h3>Conferencia magistral</h3>
+                            <p class="speaker-affiliation">Investigación y academia</p>
+                            <p>El nombre y la institución del ponente se anunciarán en las próximas semanas.</p>
+                        </div>
+                    </article>
+
+                    <article class="speaker-card">
+                        <div class="speaker-portrait" aria-hidden="true"><span>03</span></div>
+                        <div class="speaker-body">
+                            <span class="tag">Por confirmar</span>
+                            <h3>Panel de industria</h3>
+                            <p class="speaker-affiliation">Especialistas invitados</p>
+                            <p>El nombre y la institución de los panelistas se anunciarán en las próximas semanas.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="callout">
+                    <div>
+                        <h3>¿Quieres compartir tu experiencia?</h3>
+                        <p>La convocatoria de ponentes está abierta. Cuéntanos tu propuesta y la revisaremos con el comité académico.</p>
+                    </div>
+                    <a class="btn btn--primary" href="mailto:coinsi@unap.edu.pe?subject=Propuesta%20de%20ponente%20COINSI%202026">Enviar propuesta</a>
+                </div>
+
+                <p class="section-footnote">
+                    ¿Buscas referencias? <a href="../coinsi2025/index.html#ponentes">Mira los ponentes de COINSI 2025</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PROGRAMA
+             Programa preliminar. Reemplazar las actividades y los
+             nombres cuando el comité cierre la agenda.
+             ============================================================ -->
+        <section class="section" id="programa">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label"><span>03</span> Programa</p>
+                    <div>
+                        <h2>Un programa para aprender y encontrarse.</h2>
+                        <p>
+                            La agenda combina conferencias, talleres, presentación de proyectos y actividades
+                            de cierre. Los horarios son preliminares y pueden ajustarse hasta la publicación
+                            del programa oficial.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tabs">
+                    <!-- Si el congreso se extiende a un tercer día, duplicar una pestaña y su panel. -->
+                    <div class="tab-list" role="tablist" aria-label="Días del programa">
+                        <button type="button" class="tab" id="tab-dia-1" role="tab" aria-selected="true" aria-controls="dia-1">
+                            Día 1 <span>Domingo 22 nov</span>
+                        </button>
+                        <button type="button" class="tab" id="tab-dia-2" role="tab" aria-selected="false" aria-controls="dia-2" tabindex="-1">
+                            Día 2 <span>Por confirmar</span>
+                        </button>
+                    </div>
+
+                    <div class="tab-panel" id="dia-1" role="tabpanel" aria-labelledby="tab-dia-1">
+                        <ol class="agenda">
+                            <li>
+                                <time datetime="2026-11-22T08:30">08:30</time>
+                                <div>
+                                    <h3>Registro de asistentes</h3>
+                                    <p>Entrega de credenciales y materiales en el hall de la EPIS.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-11-22T09:00">09:00</time>
+                                <div>
+                                    <h3>Inauguración oficial</h3>
+                                    <p>Palabras de bienvenida de las autoridades de la UNAP y del comité organizador.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-11-22T09:30">09:30</time>
+                                <div>
+                                    <h3>Conferencia magistral</h3>
+                                    <p>Ponente por confirmar · Tema por anunciar.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-11-22T10:45">10:45</time>
+                                <div>
+                                    <h3>Pausa y café</h3>
+                                    <p>Espacio para conversar e intercambiar contactos.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-11-22T11:15">11:15</time>
+                                <div>
+                                    <h3>Panel: ingeniería de sistemas en la industria</h3>
+                                    <p>Panelistas por confirmar · Moderación a cargo del comité académico.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-11-22T13:00">13:00</time>
+                                <div>
+                                    <h3>Receso</h3>
+                                    <p>Almuerzo libre.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-11-22T14:30">14:30</time>
+                                <div>
+                                    <h3>Taller práctico</h3>
+                                    <p>Actividad por confirmar · Cupos limitados.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-11-22T16:00">16:00</time>
+                                <div>
+                                    <h3>Presentación de proyectos estudiantiles</h3>
+                                    <p>Estudiantes de la EPIS y de otras instituciones invitadas.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time datetime="2026-11-22T17:30">17:30</time>
+                                <div>
+                                    <h3>Cierre del primer día</h3>
+                                    <p>Conclusiones y anuncios para la jornada siguiente.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="tab-panel" id="dia-2" role="tabpanel" aria-labelledby="tab-dia-2" hidden>
+                        <ol class="agenda">
+                            <li>
+                                <time>09:00</time>
+                                <div>
+                                    <h3>Conferencia magistral</h3>
+                                    <p>Ponente por confirmar · Tema por anunciar.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time>10:15</time>
+                                <div>
+                                    <h3>Pausa y café</h3>
+                                    <p>Espacio para conversar e intercambiar contactos.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time>10:45</time>
+                                <div>
+                                    <h3>Concurso de investigación</h3>
+                                    <p>Presentación de pósters · Categorías A y B.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time>13:00</time>
+                                <div>
+                                    <h3>Receso</h3>
+                                    <p>Almuerzo libre.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time>14:30</time>
+                                <div>
+                                    <h3>Hackathon sistémico</h3>
+                                    <p>Presentación de equipos y evaluación del jurado.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time>16:30</time>
+                                <div>
+                                    <h3>Premiación y reconocimientos</h3>
+                                    <p>Entrega de reconocimientos a los mejores trabajos y equipos.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time>17:30</time>
+                                <div>
+                                    <h3>Clausura oficial</h3>
+                                    <p>Palabras de cierre y anuncio de la siguiente edición.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <time>18:00</time>
+                                <div>
+                                    <h3>Actividad de cierre</h3>
+                                    <p>Espacio de networking para participantes e invitados.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <p class="section-footnote">
+                    Programa preliminar sujeto a cambios. La fecha de cierre y la versión oficial se confirmarán en esta página.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             INVESTIGACIÓN
+             Completar bases, fechas y enlaces de inscripción cuando
+             el comité los publique.
+             ============================================================ -->
+        <section class="section section--bone" id="investigacion">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label"><span>04</span> Investigación</p>
+                    <div>
+                        <h2>Investiga, presenta y comparte.</h2>
+                        <p>
+                            El congreso abre espacios para proyectos de investigación y soluciones tecnológicas
+                            desarrolladas por estudiantes y profesionales. La participación se organiza en dos
+                            frentes: el concurso de investigación y el hackathon sistémico.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="research-grid">
+                    <article class="research-card">
+                        <span class="tag">Concurso</span>
+                        <h3>Concurso de investigación</h3>
+                        <p>
+                            Un espacio para presentar trabajos en modalidad póster y compartir hallazgos con
+                            docentes, investigadores y estudiantes.
+                        </p>
+                        <ul class="checklist">
+                            <li><strong>Categoría A:</strong> proyectos de investigación terminados.</li>
+                            <li><strong>Categoría B:</strong> proyectos de investigación en desarrollo.</li>
+                            <li>Modalidad póster con presentación ante el jurado.</li>
+                        </ul>
+                        <a class="text-link" href="mailto:coinsi@unap.edu.pe?subject=Bases%20del%20concurso%20de%20investigaci%C3%B3n%20COINSI%202026">Solicitar las bases <span aria-hidden="true">→</span></a>
+                    </article>
+
+                    <article class="research-card">
+                        <span class="tag">Hackathon</span>
+                        <h3>Hackathon sistémico</h3>
+                        <p>
+                            Un reto colaborativo para proponer soluciones tecnológicas a un problema concreto
+                            de la región. Los equipos trabajan durante el congreso y presentan su propuesta
+                            ante un jurado.
+                        </p>
+                        <ul class="checklist">
+                            <li>Equipos de 2 a 4 integrantes.</li>
+                            <li>Reto y bases por anunciar.</li>
+                            <li>Presentación y evaluación ante un jurado.</li>
+                        </ul>
+                        <a class="text-link" href="mailto:coinsi@unap.edu.pe?subject=Convocatoria%20hackathon%20COINSI%202026">Consultar convocatoria <span aria-hidden="true">→</span></a>
+                    </article>
+                </div>
+
+                <div class="dates">
+                    <h3>Fechas clave</h3>
+                    <dl>
+                        <div>
+                            <dt>Envío de resúmenes</dt>
+                            <dd>Por confirmar</dd>
+                        </div>
+                        <div>
+                            <dt>Notificación de aceptación</dt>
+                            <dd>Por confirmar</dd>
+                        </div>
+                        <div>
+                            <dt>Presentación de trabajos</dt>
+                            <dd>Durante el congreso</dd>
+                        </div>
+                        <div>
+                            <dt>Premiación</dt>
+                            <dd>Por confirmar</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             REGISTRO
+             Cambiar el enlace del botón cuando exista el formulario
+             oficial. Mientras tanto, el correo sirve como canal.
+             ============================================================ -->
+        <section class="section" id="registro">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="section-label"><span>05</span> Registro</p>
+                    <div>
+                        <h2>Asegura tu lugar en el COINSI 2026.</h2>
+                        <p>
+                            La inscripción se realiza mediante el formulario oficial del congreso. Si aún no
+                            está habilitado, escríbenos y te enviamos las indicaciones y el enlace actualizado.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="register-grid">
+                    <ol class="steps">
+                        <li>
+                            <span>01</span>
+                            <div>
+                                <h3>Elige tu modalidad</h3>
+                                <p>Asistente general, ponente o participante del concurso de investigación y hackathon.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <div>
+                                <h3>Completa tus datos</h3>
+                                <p>Nombre completo, institución, correo y modalidad de participación.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <div>
+                                <h3>Recibe la confirmación</h3>
+                                <p>El comité revisará tu solicitud y te enviará las indicaciones para participar.</p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <aside class="register-card">
+                        <span class="tag">Inscripciones abiertas</span>
+                        <h3>Solicita tu inscripción</h3>
+                        <p>
+                            Escríbenos con tu nombre, institución y modalidad de participación. Te responderemos
+                            con el formulario y los pasos a seguir.
+                        </p>
+                        <a class="btn btn--primary" href="mailto:coinsi@unap.edu.pe?subject=Inscripci%C3%B3n%20COINSI%202026">Escribir al comité</a>
+                        <a class="btn btn--ghost" href="#investigacion">Ver convocatoria</a>
+                        <p class="small">
+                            También puedes escribir directamente a
+                            <a href="mailto:coinsi@unap.edu.pe">coinsi@unap.edu.pe</a>.
+                        </p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-main">
+            <div class="footer-brand">
+                <a class="footer-wordmark" href="#inicio">COINSI <span>2026</span></a>
+                <p>VI Congreso Internacional de Ingeniería de Sistemas.</p>
+                <p>EPIS · Universidad Nacional del Altiplano de Puno.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#ponentes">Ponentes</a>
+                <a href="#programa">Programa</a>
+                <a href="#investigacion">Investigación</a>
+                <a href="#registro">Registro</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <a href="mailto:coinsi@unap.edu.pe">coinsi@unap.edu.pe</a>
+                <a href="https://www.facebook.com/episuna.net?locale=es_LA" target="_blank" rel="noopener noreferrer">Facebook EPIS</a>
+                <p>Puno, Perú</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Ediciones</h3>
+                <a href="../index.html">Inicio COINSI</a>
+                <a href="../coinsi2025/index.html">COINSI 2025</a>
+                <a href="#inicio" aria-current="page">COINSI 2026</a>
             </div>
         </div>
-    </section>
 
-    <section id="investigacion" class="seccion-investigacion">
-        <div class="container">
-            <h2 class="section-title">Concurso de Investigación</h2>
-            <p class="section-desc">Modalidad Póster y Artículos Científicos</p>
-        </div>
+        <div class="footer-bottom">
+            <div class="wrap footer-bottom-inner">
+                <p>© 2026 COINSI · EPIS UNA Puno. Todos los derechos reservados.</p>
 
-        <div class="grid-investigacion">
-            <div class="card-investigacion">
-                <h3>Categoría A</h3>
-                <p>Proyectos de Investigación Terminados</p>
-                <a href="#categoría-a" class="btn-investigacion">Ver Bases</a>
-            </div>
+                <div class="footer-legal">
+                    <button type="button" data-dialog="modal-privacidad">Privacidad</button>
+                    <button type="button" data-dialog="modal-terminos">Términos</button>
+                    <button type="button" data-dialog="modal-faq">Preguntas frecuentes</button>
+                </div>
 
-            <div class="card-investigacion">
-                <h3>Categoría B</h3>
-                <p>Proyectos de Investigación en Desarrollo</p>
-                <a href="#categoría-b" class="btn-investigacion">Ver Bases</a>
+                <p class="footer-credit">
+                    Desarrollo web:
+                    <a href="https://www.linkedin.com/in/mark-arisaca-67071b29b/" target="_blank" rel="noopener noreferrer">Mark Arisaca</a>,
+                    <a href="https://www.linkedin.com/in/eder-ander-bravo-531377271/" target="_blank" rel="noopener noreferrer">Eder Quispe</a>,
+                    <a href="https://www.linkedin.com/in/franklin-chura-b81885344/" target="_blank" rel="noopener noreferrer">Franklin Chura</a>
+                </p>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <section id="programa" class="seccion-programa">
-        <div class="container">
-            <h2 class="section-title">Programa del Evento</h2>
-            <p class="section-desc">Actividades Académicas y Conferencias</p>
+    <!-- ============================================================
+         VENTANAS LEGALES
+         Se abren sobre la misma página con <dialog>.
+         ============================================================ -->
+    <dialog class="legal-modal" id="modal-privacidad" aria-labelledby="titulo-privacidad">
+        <div class="legal-head">
+            <h2 id="titulo-privacidad">Política de privacidad</h2>
+            <button type="button" class="legal-close" aria-label="Cerrar">&times;</button>
         </div>
-        <div class="programa-tabs">
-            <button class="tab-btn">Día 1 (Miércoles)</button>
-            <button class="tab-btn">Día 2 (Jueves)</button>
-            <button class="tab-btn">Día 3 (Viernes)</button>
+        <div class="legal-body">
+            <p>En COINSI respetamos tu privacidad. Esta política explica qué información podemos recibir cuando visitas este sitio y cómo la utilizamos.</p>
+
+            <h3>Información que recibimos</h3>
+            <p>Este sitio no cuenta con formularios de registro propios. Solo recibimos los datos que nos envías voluntariamente por correo electrónico, por ejemplo tu nombre, institución y mensaje, cuando escribes a nuestras direcciones de contacto.</p>
+
+            <h3>Uso de la información</h3>
+            <p>Los datos que nos compartes se utilizan únicamente para responder tus consultas, coordinar inscripciones o propuestas de ponencia y enviarte información relacionada con el congreso. No vendemos ni compartimos tu información con terceros para fines publicitarios.</p>
+
+            <h3>Cookies</h3>
+            <p>Este sitio no utiliza cookies de seguimiento ni de publicidad. El navegador puede almacenar información técnica necesaria para el funcionamiento de la página.</p>
+
+            <h3>Enlaces externos</h3>
+            <p>La página puede incluir enlaces a sitios de terceros, como ediciones anteriores o redes sociales. No somos responsables de las políticas de privacidad de esos sitios.</p>
+
+            <h3>Tus derechos</h3>
+            <p>Puedes solicitar el acceso, la corrección o la eliminación de los datos que nos hayas enviado escribiendo a <a href="mailto:coinsi@unap.edu.pe">coinsi@unap.edu.pe</a>.</p>
+
+            <h3>Cambios en esta política</h3>
+            <p>Podemos actualizar esta política cuando sea necesario. La versión vigente será siempre la publicada en esta página.</p>
+
+            <p class="legal-note">Última actualización: 2026</p>
         </div>
-        <div class="programa-content">
-            <div class="evento-item">
-                <span class="evento-hora">08:30 AM - 09:30 AM</span>
-                <h3>Inauguración Oficial del COINSI 2026</h3>
-                <p>Palabras de bienvenida a cargo de las autoridades de la EPIS y comité organizador.</p>
-            </div>
-            <div class="evento-item">
-                <span class="evento-hora">09:45 AM - 11:00 AM</span>
-                <h3>Conferencia Magistral: Inteligencia Artificial en la Industria</h3>
-                <p>Exploración de casos de éxito en la implementación de modelos predictivos y PyTorch.</p>
-            </div>
+    </dialog>
+
+    <dialog class="legal-modal" id="modal-terminos" aria-labelledby="titulo-terminos">
+        <div class="legal-head">
+            <h2 id="titulo-terminos">Términos de uso</h2>
+            <button type="button" class="legal-close" aria-label="Cerrar">&times;</button>
         </div>
-    </section>
+        <div class="legal-body">
+            <p>Al navegar por este sitio aceptas los siguientes términos. Si no estás de acuerdo, te pedimos no utilizar la página.</p>
 
-    
+            <h3>Finalidad del sitio</h3>
+            <p>Este sitio tiene fines informativos y académicos: difundir el COINSI 2026, sus actividades, convocatorias y canales de contacto.</p>
 
-    <section id="fechas" class="seccion-fechas">
-        <h2>Fechas Importantes</h2>
-        <ul class="lista-fechas">
-            <li><strong>Envío de Artículos:</strong> 30 de Agosto, 2026</li>
-            <li><strong>Notificación de Aceptación:</strong> 10 de Septiembre, 2026</li>
-            <li><strong>Congreso COINSI:</strong> 28 al 30 de Octubre, 2026</li>
-        </ul>
-    </section>
+            <h3>Propiedad intelectual</h3>
+            <p>Los textos, logotipos, imágenes y demás contenidos pertenecen a COINSI, a la Universidad Nacional del Altiplano de Puno o se utilizan con autorización. No está permitida su reproducción o uso comercial sin autorización previa.</p>
 
+            <h3>Uso adecuado</h3>
+            <p>Te comprometes a utilizar el sitio de forma lícita y respetuosa. No está permitido intentar vulnerar su seguridad, alterar su contenido ni usarlo para fines que perjudiquen a terceros.</p>
 
-    <section id="registro" class="seccion-registro">
-        <h2>Inscripciones Abiertas hasta el día del evento</h2>
-        <p>Sé parte del X Congreso Internacional de Ingeniería de Sistemas.</p>
-        <a href="#registro" class="btn-principal">Regístrate Ahora</a>
-    </section>
+            <h3>Exactitud de la información</h3>
+            <p>Procuramos mantener la información actualizada. Sin embargo, las fechas, el programa y otras actividades pueden cambiar; la información oficial se comunicará por esta página y por nuestros canales de contacto.</p>
 
-    <div class="contenedor-metricas">
-            <div class="caja-metrica">
-                <h3>+500</h3>
-                <p>Participantes</p>
-            </div>
-            <div class="caja-metrica">
-                <h3>+15</h3>
-                <p>Ponentes Internacionales</p>
-            </div>
-            <div class="caja-metrica">
-                <h3>+5</h3>
-                <p>Países Invitados</p>
-            </div>
+            <h3>Enlaces externos</h3>
+            <p>Los enlaces a otros sitios se ofrecen como referencia. No controlamos ni somos responsables de su contenido o disponibilidad.</p>
+
+            <h3>Modificaciones</h3>
+            <p>Podemos actualizar estos términos en cualquier momento. El uso continuado del sitio implica la aceptación de la versión vigente.</p>
+
+            <h3>Contacto</h3>
+            <p>Para cualquier consulta sobre estos términos, escríbenos a <a href="mailto:coinsi@unap.edu.pe">coinsi@unap.edu.pe</a>.</p>
+
+            <p class="legal-note">Última actualización: 2026</p>
         </div>
-    <footer class="footer">
-        <p>&copy; 2026 COINSI - UNA Puno. Todos los derechos reservados.</p> </footer>
+    </dialog>
 
+    <dialog class="legal-modal" id="modal-faq" aria-labelledby="titulo-faq">
+        <div class="legal-head">
+            <h2 id="titulo-faq">Preguntas frecuentes</h2>
+            <button type="button" class="legal-close" aria-label="Cerrar">&times;</button>
+        </div>
+        <div class="legal-body">
+            <details class="faq-item">
+                <summary>¿Qué es el COINSI?</summary>
+                <p>El COINSI es el Congreso Internacional de Ingeniería de Sistemas, organizado por la Escuela Profesional de Ingeniería de Sistemas de la Universidad Nacional del Altiplano de Puno. Es un espacio para compartir investigación, innovación y experiencias del sector.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cuándo y dónde se realiza?</summary>
+                <p>El COINSI 2026 comenzará el 22 de noviembre en la EPIS · Universidad Nacional del Altiplano de Puno, en la ciudad de Puno, Perú.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cómo puedo participar?</summary>
+                <p>Puedes participar como asistente, ponente o integrante de un equipo de investigación o hackathon. Escríbenos a <a href="mailto:coinsi@unap.edu.pe">coinsi@unap.edu.pe</a> y te orientaremos según tu caso.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cómo me inscribo?</summary>
+                <p>La inscripción se realiza mediante el formulario oficial del congreso. Si aún no está habilitado, escríbenos y te enviaremos el enlace y las indicaciones actualizadas.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Puedo presentar un trabajo?</summary>
+                <p>Sí. El concurso de investigación tiene categorías para proyectos terminados y en desarrollo. Las bases y los plazos se publican en la sección Investigación y también se pueden solicitar por correo.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Dónde puedo ver la edición anterior?</summary>
+                <p>Puedes visitar <a href="../coinsi2025/index.html">COINSI 2025</a> para conocer el programa, los ponentes y las actividades de la edición anterior.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cómo puedo contactarlos?</summary>
+                <p>Escríbenos a nuestro correo oficial: <a href="mailto:coinsi@unap.edu.pe">coinsi@unap.edu.pe</a> o a través de la página de Facebook de la EPIS - UNA Puno.</p>
+            </details>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
 </body>
 </html>
