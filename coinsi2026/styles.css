@@ -1,25 +1,25 @@
 /* ============================================================
    COINSI 2026
-   Diseño editorial en tonos cálidos: papel, tinta y terracota.
-   Sin gradientes azules ni efectos de vidrio.
+   Diseño limpio y profesional — blanco, gris, negro.
+   Misma línea visual que la página principal de COINSI.
    ============================================================ */
 
 :root {
-    --ink: #191714;
-    --ink-soft: #2a2723;
-    --paper: #faf8f3;
-    --bone: #f1ede4;
-    --line: #ded8cb;
-    --line-strong: #c9c1b1;
-    --text: #23201b;
-    --muted: #6e675c;
-    --accent: #a34a2a;
-    --accent-dark: #7f361d;
-    --accent-soft: #f3e5dc;
-    --accent-on-dark: #e6ad86;
+    --ink: #111827;
+    --ink-soft: #1f2937;
+    --paper: #ffffff;
+    --bone: #f8fafc;
+    --line: #e2e8f0;
+    --line-strong: #cbd5e1;
+    --text: #111827;
+    --muted: #4b5563;
+    --accent: #111827;
+    --accent-dark: #000000;
+    --accent-soft: #f1f5f9;
+    --accent-on-dark: #e2e8f0;
     --wrap: 1180px;
     --radius: 6px;
-    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
     --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
@@ -63,8 +63,8 @@ button {
 }
 
 ::selection {
-    background: var(--accent);
-    color: var(--paper);
+    background: var(--ink);
+    color: #ffffff;
 }
 
 :focus-visible {
@@ -170,7 +170,7 @@ section[id] {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(250, 248, 243, 0.97);
+    background: rgba(255, 255, 255, 0.97);
     border-bottom: 1px solid var(--line);
 }
 
@@ -233,7 +233,7 @@ section[id] {
 .nav-dropdown summary {
     position: relative;
     padding: 8px 0;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--ink-soft);
     text-decoration: none;
@@ -299,7 +299,7 @@ section[id] {
     background: var(--paper);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    box-shadow: 0 14px 34px rgba(25, 23, 20, 0.12);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
     z-index: 110;
 }
 
@@ -374,7 +374,7 @@ section[id] {
     height: 100%;
     object-fit: cover;
     object-position: center 45%;
-    filter: saturate(0.82) sepia(0.1) brightness(0.94);
+    filter: brightness(1.05);
 }
 
 .hero-media::after {
@@ -382,8 +382,8 @@ section[id] {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(180deg, rgba(25, 23, 20, 0.5) 0%, rgba(25, 23, 20, 0) 32%, rgba(25, 23, 20, 0) 62%, rgba(25, 23, 20, 0.6) 100%),
-        linear-gradient(90deg, rgba(25, 23, 20, 0.9) 0%, rgba(25, 23, 20, 0.72) 38%, rgba(25, 23, 20, 0.32) 64%, rgba(25, 23, 20, 0.06) 100%);
+        linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.45) 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.02) 100%);
 }
 
 .hero-inner {
@@ -403,7 +403,7 @@ section[id] {
     font-weight: 600;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(250, 248, 243, 0.68);
+    color: rgba(255, 255, 255, 0.78);
 }
 
 .eyebrow span {
@@ -422,7 +422,7 @@ section[id] {
 .hero h1 em {
     font-style: italic;
     font-weight: 400;
-    color: var(--accent-on-dark);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-lead {
@@ -430,7 +430,7 @@ section[id] {
     margin-bottom: 30px;
     font-size: 1.02rem;
     line-height: 1.72;
-    color: rgba(250, 248, 243, 0.76);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-actions {
@@ -451,13 +451,13 @@ section[id] {
 }
 
 .hero .btn--ghost {
-    color: var(--paper);
-    border-color: rgba(250, 248, 243, 0.32);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .hero .btn--ghost:hover {
-    background: rgba(250, 248, 243, 0.08);
-    border-color: var(--paper);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
 }
 
 .hero-meta {
@@ -469,7 +469,7 @@ section[id] {
     list-style: none;
     font-size: 0.74rem;
     letter-spacing: 0.03em;
-    color: rgba(250, 248, 243, 0.62);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .hero-meta li {
@@ -491,8 +491,8 @@ section[id] {
 
 .countdown {
     padding: 28px;
-    background: rgba(20, 18, 15, 0.84);
-    border: 1px solid rgba(250, 248, 243, 0.16);
+    background: rgba(17, 24, 39, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-top: 2px solid var(--accent);
     border-radius: var(--radius);
 }
@@ -504,7 +504,7 @@ section[id] {
     gap: 16px;
     padding-bottom: 16px;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(250, 248, 243, 0.14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .countdown-head h2 {
@@ -514,7 +514,7 @@ section[id] {
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(250, 248, 243, 0.62);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .countdown-head span {
@@ -533,7 +533,7 @@ section[id] {
 .countdown-grid > div {
     padding: 0 8px;
     text-align: center;
-    border-right: 1px solid rgba(250, 248, 243, 0.12);
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .countdown-grid > div:first-child {
@@ -562,13 +562,13 @@ section[id] {
     font-weight: 600;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(250, 248, 243, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .countdown-note {
     margin-top: 20px;
     font-size: 0.72rem;
-    color: rgba(250, 248, 243, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .countdown-link {
@@ -913,7 +913,7 @@ section[id] {
     max-width: 620px;
     font-size: 0.9rem;
     line-height: 1.65;
-    color: rgba(250, 248, 243, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .callout .btn--primary {
@@ -1162,7 +1162,7 @@ section[id] {
     grid-template-columns: 1.4fr 0.8fr 0.9fr 0.8fr;
     gap: 40px;
     padding-bottom: 48px;
-    border-bottom: 1px solid rgba(250, 248, 243, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .footer-wordmark {
@@ -1185,7 +1185,7 @@ section[id] {
     margin-bottom: 6px;
     font-size: 0.84rem;
     line-height: 1.6;
-    color: rgba(250, 248, 243, 0.65);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .footer-col h3 {
@@ -1195,7 +1195,7 @@ section[id] {
     font-weight: 600;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(250, 248, 243, 0.55);
+    color: rgba(255, 255, 255, 0.55);
 }
 
 .footer-col a,
@@ -1203,7 +1203,7 @@ section[id] {
     display: block;
     margin: 0 0 10px;
     font-size: 0.84rem;
-    color: rgba(250, 248, 243, 0.74);
+    color: rgba(255, 255, 255, 0.74);
     text-decoration: none;
 }
 
@@ -1222,7 +1222,7 @@ section[id] {
     justify-content: space-between;
     gap: 12px 24px;
     font-size: 0.72rem;
-    color: rgba(250, 248, 243, 0.58);
+    color: rgba(255, 255, 255, 0.58);
 }
 
 .footer-legal {
@@ -1236,7 +1236,7 @@ section[id] {
     background: none;
     border: 0;
     font-size: 0.72rem;
-    color: rgba(250, 248, 243, 0.62);
+    color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
 }
 
@@ -1246,7 +1246,7 @@ section[id] {
 }
 
 .footer-credit a {
-    color: rgba(250, 248, 243, 0.64);
+    color: rgba(255, 255, 255, 0.64);
     text-decoration: none;
 }
 
@@ -1274,7 +1274,7 @@ dialog.legal-modal[open] {
 }
 
 dialog.legal-modal::backdrop {
-    background: rgba(20, 18, 15, 0.66);
+    background: rgba(17, 24, 39, 0.7);
 }
 
 .legal-head {
@@ -1462,7 +1462,7 @@ dialog.legal-modal::backdrop {
         padding: 10px 24px 22px;
         background: var(--paper);
         border-bottom: 1px solid var(--line);
-        box-shadow: 0 18px 28px rgba(25, 23, 20, 0.1);
+        box-shadow: 0 18px 28px rgba(0, 0, 0, 0.1);
     }
 
     .nav.is-open {
