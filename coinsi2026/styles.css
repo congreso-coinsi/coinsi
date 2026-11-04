@@ -413,19 +413,20 @@ section[id] {
     height: 100%;
     object-fit: cover;
     object-position: center 42%;
-    filter: brightness(1.14) contrast(1.05); /* Fondo de portada claro y nítido */
+    filter: brightness(1.08) contrast(1.06); /* Foto original nítida sin desenfoque */
 }
 
 .hero-media::after {
     content: '';
     position: absolute;
     inset: 0;
-    /* Degradado limpio que deja ver la foto con total claridad */
+    /* Degradado direccional: protege la lectura del texto en la izquierda y deja libre y clara la foto en el centro y derecha */
     background: linear-gradient(
         to right,
-        rgba(15, 23, 42, 0.78) 0%,
-        rgba(15, 23, 42, 0.45) 55%,
-        rgba(15, 23, 42, 0.12) 100%
+        rgba(15, 23, 42, 0.72) 0%,
+        rgba(15, 23, 42, 0.40) 45%,
+        rgba(15, 23, 42, 0.08) 80%,
+        transparent 100%
     );
 }
 
