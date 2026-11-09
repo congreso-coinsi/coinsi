@@ -3,10 +3,10 @@
 
     /* ============================================================
        Cuenta regresiva
-       Fecha objetivo: 22 de noviembre de 2026, 09:00 (GMT-5).
+       Fecha objetivo: 26 de noviembre de 2026, 08:30 (GMT-5).
        Para cambiar la fecha, edita solo esta línea.
        ============================================================ */
-    var targetDate = new Date('2026-11-22T09:00:00-05:00').getTime();
+    var targetDate = new Date('2026-11-26T08:30:00-05:00').getTime();
 
     var countdown = {
         days: document.getElementById('cd-days'),
@@ -119,53 +119,27 @@
     });
 
     /* ============================================================
-       Pestañas del programa
+       Pestañas del cronograma
        ============================================================ */
-    var tabList = document.querySelector('[role="tablist"]');
+    var tabBtns = document.querySelectorAll('.tab-btn-coinsi');
+    var tabPanes = document.querySelectorAll('.cronograma-pane');
 
-    if (tabList) {
-        var tabs = Array.prototype.slice.call(tabList.querySelectorAll('[role="tab"]'));
-        var panels = tabs.map(function (tab) {
-            return document.getElementById(tab.getAttribute('aria-controls'));
-        });
+    if (tabBtns.length && tabPanes.length) {
+        tabBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var targetId = btn.getAttribute('data-table');
 
-        function activateTab(index, focusTab) {
-            tabs.forEach(function (tab, position) {
-                var isSelected = position === index;
-                tab.setAttribute('aria-selected', String(isSelected));
-                tab.tabIndex = isSelected ? 0 : -1;
+                tabBtns.forEach(function (b) {
+                    b.classList.remove('is-active');
+                });
+                tabPanes.forEach(function (p) {
+                    p.classList.remove('is-active');
+                });
 
-                if (panels[position]) {
-                    panels[position].hidden = !isSelected;
-                }
-            });
-
-            if (focusTab) {
-                tabs[index].focus();
-            }
-        }
-
-        tabs.forEach(function (tab, index) {
-            tab.addEventListener('click', function () {
-                activateTab(index, false);
-            });
-
-            tab.addEventListener('keydown', function (event) {
-                var nextIndex = null;
-
-                if (event.key === 'ArrowRight') {
-                    nextIndex = (index + 1) % tabs.length;
-                } else if (event.key === 'ArrowLeft') {
-                    nextIndex = (index - 1 + tabs.length) % tabs.length;
-                } else if (event.key === 'Home') {
-                    nextIndex = 0;
-                } else if (event.key === 'End') {
-                    nextIndex = tabs.length - 1;
-                }
-
-                if (nextIndex !== null) {
-                    event.preventDefault();
-                    activateTab(nextIndex, true);
+                btn.classList.add('is-active');
+                var targetPane = document.getElementById(targetId);
+                if (targetPane) {
+                    targetPane.classList.add('is-active');
                 }
             });
         });

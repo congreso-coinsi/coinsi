@@ -704,46 +704,16 @@ section[id] {
 }
 
 .section-head {
-    display: grid;
-    grid-template-columns: 220px minmax(0, 1fr);
-    gap: 36px;
-    align-items: start;
-    padding-top: 24px;
-    margin-bottom: 52px;
+    display: block;
+    padding-top: 18px;
+    margin-bottom: 36px;
     border-top: 2px solid var(--azul);
 }
 
-.section-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--azul);
-}
-
-.section-label span {
-    display: inline-grid;
-    place-items: center;
-    width: 28px;
-    height: 28px;
-    background: var(--azul-soft);
-    border: 1px solid var(--azul-border);
-    border-radius: 6px;
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0;
-    color: var(--azul);
-}
-
 .section-head h2 {
-    max-width: 820px;
-    margin: 0 0 16px;
+    margin: 0;
     font-family: var(--font-display);
-    font-size: clamp(2.1rem, 4vw, 3rem);
+    font-size: clamp(2rem, 3.8vw, 2.7rem);
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.025em;
@@ -953,22 +923,119 @@ section[id] {
 .speaker-body h3 {
     margin: 4px 0 0;
     font-family: var(--font-display);
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--text);
 }
 
-.speaker-affiliation {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--muted);
+.speaker-topic {
+    margin-top: 8px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #1e293b;
 }
 
-.speaker-body p:last-child {
-    margin-top: 6px;
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: var(--text-lead);
+.speaker-topic strong {
+    color: var(--azul);
+}
+
+/* ---------- Programa y Cronograma (Estilo COINSI 2025) ---------- */
+
+.tab-buttons-coinsi {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.tab-btn-coinsi {
+    padding: 10px 20px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    color: var(--text);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+}
+
+.tab-btn-coinsi.is-active,
+.tab-btn-coinsi:hover {
+    background: #0f172a;
+    color: #ffffff;
+    border-color: #0f172a;
+}
+
+.cronograma-pane {
+    display: none;
+}
+
+.cronograma-pane.is-active {
+    display: block;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cronograma-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    font-size: 0.92rem;
+}
+
+.cronograma-table th,
+.cronograma-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+}
+
+.cronograma-table th {
+    background: #0f172a;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.cronograma-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.cronograma-table td:first-child {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--azul);
+    white-space: nowrap;
+}
+
+.cronograma-table .highlight-row {
+    background: #f1f5f9;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.cronograma-table .block-header td {
+    background: #e2e8f0;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    color: #0f172a;
+    text-align: center;
+    padding: 10px;
 }
 
 .callout {
