@@ -1500,7 +1500,7 @@ section[id] {
     height: 72px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center;
     border: 2px solid #1e293b;
     flex-shrink: 0;
 }
