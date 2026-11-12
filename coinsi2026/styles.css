@@ -1378,50 +1378,88 @@ section[id] {
     gap: 12px;
 }
 
-.dates {
-    padding: 32px 36px;
-    background: #ffffff;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+/* ---------- Equipo técnico ---------- */
+
+.footer-team {
+    padding-bottom: 48px;
+    border-bottom: 1px solid #1e293b;
 }
 
-.dates h3 {
+.footer-team-title {
     margin: 0 0 20px;
     font-family: var(--font-display);
-    font-size: 1.45rem;
+    font-size: 0.78rem;
     font-weight: 700;
-    color: var(--text);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #cbd5e1;
 }
 
-.dates dl {
+.footer-team-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0 48px;
-    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.dates dl > div {
+.team-card {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    align-items: center;
     gap: 16px;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--line);
+    padding: 18px;
+    background: #0b1220;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.dates dt {
-    font-size: 0.92rem;
-    font-weight: 600;
-    color: var(--muted);
+.team-card:hover {
+    transform: translateY(-2px);
+    border-color: #334155;
 }
 
-.dates dd {
-    margin: 0;
-    font-size: 0.95rem;
+.team-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 2px solid #1e293b;
+    flex-shrink: 0;
+}
+
+.team-body h3 {
+    margin: 0 0 4px;
+    font-family: var(--font-display);
+    font-size: 1rem;
     font-weight: 700;
-    color: var(--text);
-    text-align: right;
+    color: #ffffff;
+}
+
+.team-role {
+    margin: 0 0 2px;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #cbd5e1;
+}
+
+.team-org {
+    margin: 0 0 8px;
+    font-size: 0.78rem;
+    color: #64748b;
+}
+
+.team-social {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.team-social:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /* ---------- Pie de página ---------- */
@@ -1808,14 +1846,14 @@ dialog.legal-modal::backdrop {
         grid-template-columns: 1fr;
     }
 
-    .dates dl {
-        grid-template-columns: 1fr;
-    }
-
     .callout {
         flex-direction: column;
         align-items: flex-start;
         gap: 22px;
+    }
+
+    .footer-team-grid {
+        grid-template-columns: 1fr;
     }
 
     .footer-main {
@@ -1943,9 +1981,5 @@ dialog.legal-modal::backdrop {
     .fact-card dl > div {
         grid-template-columns: 1fr;
         gap: 2px;
-    }
-
-    .dates {
-        padding: 24px;
     }
 }
