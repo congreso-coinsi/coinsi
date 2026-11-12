@@ -234,4 +234,24 @@
         }
     });
 
+    /* ============================================================
+       Fotos de ponentes
+       La foto se muestra únicamente cuando la imagen carga; si aún
+       no existe, se conservan las iniciales como respaldo.
+       ============================================================ */
+    document.querySelectorAll('.speaker-portrait .speaker-photo').forEach(function (img) {
+        function showPhoto() {
+            var figure = img.closest('.speaker-portrait');
+            if (figure) {
+                figure.classList.add('has-photo');
+            }
+        }
+
+        img.addEventListener('load', showPhoto);
+
+        if (img.complete && img.naturalWidth > 0) {
+            showPhoto();
+        }
+    });
+
 })();
