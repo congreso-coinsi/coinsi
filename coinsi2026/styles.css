@@ -1297,22 +1297,81 @@ section[id] {
 
 .research-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 28px;
-    margin-bottom: 36px;
 }
 
-.research-card {
-    display: flex;
-    flex-direction: column;
-    padding: 34px;
+.event-card {
+    display: grid;
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    gap: 34px;
+    align-items: start;
+    padding: 30px;
     background: #ffffff;
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: 14px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
-.research-card h3 {
+.event-flyer {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(160deg, #0f172a 0%, #1d4ed8 100%);
+    border-radius: 10px;
+}
+
+.event-flyer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-flyer.is-missing img {
+    display: none;
+}
+
+.flyer-fallback {
+    display: none;
+}
+
+.event-flyer.is-missing .flyer-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 24px;
+    color: #ffffff;
+}
+
+.flyer-fallback-kicker {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #93c5fd;
+}
+
+.flyer-fallback strong {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.flyer-fallback span:last-child {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+.event-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.event-body h3 {
     margin: 14px 0 12px;
     font-family: var(--font-display);
     font-size: clamp(1.4rem, 3.5vw, 1.7rem);
@@ -1320,11 +1379,28 @@ section[id] {
     color: var(--text);
 }
 
-.research-card > p {
+.event-body > p {
     margin-bottom: 20px;
     font-size: 1rem;
     line-height: 1.75;
     color: var(--text-lead);
+}
+
+.event-body .checklist {
+    margin-bottom: 0;
+}
+
+.event-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 26px;
+}
+
+.event-actions .btn {
+    padding: 11px 20px;
+    font-size: 0.88rem;
 }
 
 .checklist {
@@ -1358,24 +1434,6 @@ section[id] {
 .checklist strong {
     color: var(--text);
     font-weight: 700;
-}
-
-.text-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: auto;
-    font-size: 0.92rem;
-    font-weight: 700;
-    color: var(--azul);
-    text-decoration: none;
-    transition: gap 0.2s ease;
-}
-
-.text-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    gap: 12px;
 }
 
 /* ---------- Equipo técnico ---------- */
@@ -1844,6 +1902,16 @@ dialog.legal-modal::backdrop {
 
     .research-grid {
         grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .event-flyer {
+        max-width: 280px;
     }
 
     .callout {

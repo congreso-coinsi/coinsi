@@ -214,4 +214,24 @@
         });
     }
 
+    /* ============================================================
+       Flyers de las convocatorias
+       Si la imagen aún no está disponible, se muestra un respaldo
+       con el nombre del evento en lugar de un ícono roto.
+       ============================================================ */
+    document.querySelectorAll('.event-flyer .flyer-img').forEach(function (img) {
+        function markMissing() {
+            var figure = img.closest('.event-flyer');
+            if (figure) {
+                figure.classList.add('is-missing');
+            }
+        }
+
+        img.addEventListener('error', markMissing);
+
+        if (img.complete && img.naturalWidth === 0) {
+            markMissing();
+        }
+    });
+
 })();
