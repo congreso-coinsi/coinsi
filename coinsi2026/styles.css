@@ -469,6 +469,96 @@ section[id] {
     color: #38bdf8;
 }
 
+/* Datos clave de la portada: fecha y sede con enlace a Google Maps */
+
+.hero-keyfacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0 0 26px;
+    list-style: none;
+}
+
+.hero-keyfact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    font-size: 0.98rem;
+    line-height: 1.4;
+}
+
+.hero-keyfact-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #93c5fd;
+}
+
+.hero-keyfact strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero-keyfact--date {
+    border-color: rgba(56, 189, 248, 0.55);
+    animation: hero-date-pulse 3.6s ease-in-out infinite;
+}
+
+.hero-keyfact--date strong {
+    color: #7dd3fc;
+}
+
+.hero-keyfact--place a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 2px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 2px solid #38bdf8;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-keyfact--place a:hover {
+    color: #7dd3fc;
+    border-color: #7dd3fc;
+}
+
+.hero-keyfact--place svg {
+    color: #38bdf8;
+    flex-shrink: 0;
+}
+
+@keyframes hero-date-pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+    }
+    50% {
+        box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.16);
+    }
+}
+
+.fact-link {
+    color: var(--azul);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.fact-link:hover {
+    color: var(--azul-hover);
+}
+
 .hero-lead {
     max-width: 560px;
     margin-bottom: 30px;
@@ -577,11 +667,28 @@ section[id] {
 }
 
 .countdown-head span {
+    padding: 4px 10px;
     font-size: 0.82rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: #38bdf8;
+    color: #7dd3fc;
     white-space: nowrap;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    border-radius: 999px;
+    animation: countdown-date-pulse 3.6s ease-in-out infinite;
+}
+
+@keyframes countdown-date-pulse {
+    0%,
+    100% {
+        border-color: rgba(56, 189, 248, 0.45);
+        color: #7dd3fc;
+    }
+    50% {
+        border-color: rgba(56, 189, 248, 0.95);
+        color: #ffffff;
+    }
 }
 
 .countdown-grid {
@@ -1788,6 +1895,16 @@ dialog.legal-modal::backdrop {
     .hero-meta {
         flex-direction: column;
         gap: 6px;
+    }
+
+    .hero-keyfacts {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-keyfact {
+        justify-content: space-between;
+        gap: 14px;
     }
 
     .countdown-head {
