@@ -1970,6 +1970,11 @@ dialog.legal-modal::backdrop {
         padding: 22px;
     }
 
+    .speaker-portrait {
+        aspect-ratio: 4 / 3;
+        max-height: 260px;
+    }
+
     .agenda li {
         grid-template-columns: 1fr;
         gap: 6px;
